@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escola Virtual - Pré-Matrícula</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 600px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .coluna {
+            display: inline;
+        }
+        .topico {
+            display: block;
+        }
+        label {
+            margin-top: 10px;
+        }
+        input[type="text"], input[type="email"], input[type="date"] {
+            width: calc(100% - 20px);
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: rgb(109, 109, 109);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Escola Virtual</h1>
+        <h2>Formulário de Pré-Matrícula</h2>
+
+        <form action="/submit" method="POST">
+            <!-- Dados Pessoais -->
+            <fieldset>
+                <legend>Dados Pessoais:</legend>
+                <label for="nomeAluno" class="topico">Nome do Aluno:</label>
+                <input type="text" id="nomeAluno" name="nomeAluno">
+
+                <label for="nascimento" class="topico">Nascimento (dd/mm/aaaa):</label>
+                <input type="date" id="nascimento" name="nascimento">
+
+                <label for="nomeMae" class="topico">Nome da Mãe:</label>
+                <input type="text" id="nomeMae" name="nomeMae">
+
+                <label for="nomePai" class="topico">Nome do Pai:</label>
+                <input type="text" id="nomePai" name="nomePai">
+
+                <label class="topico">Telefone:</label>
+                <label for="ddd">DDD:</label>
+                <input type="text" id="ddd" name="ddd" placeholder="(   )">
+                <label for="telefone">Telefone:</label>
+                <input type="text" id="telefone" name="telefone" placeholder="Telefone">
+
+                <label for="email" class="topico">E-mail:</label>
+                <input type="email" id="email" name="email">
+            </fieldset>
+
+            <!-- Informações de Matrícula -->
+            <fieldset style="margin-top: 15px;">
+                <legend>Informações de Matrícula:</legend>
+
+                <div class="coluna">
+                    <label for="serie" class="topico">Série:</label>
+                    <select id="serie" name="serie">
+                        <option value="pre-escolar">Pré-escolar</option>
+                        <option value="fundamental1">Fundamental I</option>
+                        <option value="fundamental2">Fundamental II</option>
+                        <option value="medio">Ensino Médio</option>
+                    </select>
+                </div>
+
+                <div class="coluna">
+                    <label class="topico">Turno:</label>
+                    <input type="radio" id="manha" name="turno" value="manhã">
+                    <label for="manha">Manhã</label>
+                    <input type="radio" id="tarde" name="turno" value="tarde">
+                    <label for="tarde">Tarde</label>
+
+                </div>
+
+                <div class="coluna">
+                    <label class="topico">Atividades Extracurriculares:</label>
+                    <input type="checkbox" id="informatica" name="atividades" value="informatica">
+                    <label for="informatica">Informática</label>
+                    <input type="checkbox" id="musica" name="atividades" value="musica">
+                    <label for="musica">Música</label>
+                    <input type="checkbox" id="ballet" name="atividades" value="ballet">
+                    <label for="ballet">Ballet</label>
+                    <input type="checkbox" id="pintura" name="atividades" value="pintura">
+                    <label for="pintura">Pintura</label>
+                    <input type="checkbox" id="judo" name="atividades" value="judo">
+                    <label for="judo">Judô</label>
+                    <input type="checkbox" id="futebol" name="atividades" value="futebol">
+                    <label for="futebol">Futebol</label>
+
+                </div>
+                
+
+            
+            </fieldset>
+
+            <!-- Botões -->
+            <div class="buttons">
+                <button type="submit">Envia Formulário</button>
+                <button type="reset">Limpa Campos</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
